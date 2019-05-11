@@ -31,7 +31,7 @@ App to display json data from an [API json file](https://media.jscrambler.com/bl
 
 * [Capacitor v1.0.0-beta.24](https://capacitor.ionicframework.com/) open source native container used to build the app to run on iOS, Android, Electron (Desktop).
 
-* [CORS Chrome Plugin](chrome://extensions/?id=digfbfaphojjndkpccljibejjbppifbc) to allow cross-domain requestst to be sent, also overrides Request Origin and CORS headers.
+* [CORS Chrome Plugin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=es) to allow cross-domain requestst to be sent, also overrides Request Origin and CORS headers.
 
 ## Setup
 
@@ -62,9 +62,9 @@ getData() {
 
 ## Status & To-do list
 
-* Status: working basic API news app.
+* Status: working app that shows API data.
 
-* To-do: Change tabs to new system. Add a lot more detail/styling to front page.
+* To-do: publish to the web then add functionality.
 
 ## Inspiration
 
