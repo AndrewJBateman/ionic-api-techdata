@@ -12,7 +12,7 @@ const { Clipboard } = Plugins;
 export class HomePage {
 
 	// declare variables: address of JSON file and an array to hold the data
-	API_URL = 'https://media.jscrambler.com/blog/data.json';
+	API_URL = 'https://www.techiediaries.com/api/data.json';
 	entries: Array<any>;
 
 	constructor(private httpClient: HttpClient) {
@@ -34,6 +34,7 @@ export class HomePage {
 
 	// method to copy a term to the clipboard.
 	async copy(name: string, text: string) {
+		console.log('copy', text);
 		Clipboard.write({
 			string: name + ' is ' + text
 		});
