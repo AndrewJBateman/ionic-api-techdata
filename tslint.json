@@ -19,6 +19,9 @@
       true,
       140
     ],
+		"indent": {
+      "options": ["tabs", 2]
+    },
     "member-access": false,
     "member-ordering": [
       true,
