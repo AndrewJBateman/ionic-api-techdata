@@ -19,10 +19,15 @@
 				</ion-header>
 				<ion-card-content>
 					<p>{{ entry.description }}</p>
-				</ion-card-content>
-					<ion-button (click)="copy(entry.name, entry.description)">
+					<!-- ion-button fill="outline"  -->
+					<ion-button color="primary" ion-button fill="outline" href="{{ entry.url }}" large>More...</ion-button>
+					<ion-button color="secondary" ion-button fill="outline" (click)="copy(entry.name, entry.description)">
 						COPY
 					</ion-button>
+
+					
+				</ion-card-content>
+					
 			</ion-card>
 			
 		</ion-item>
