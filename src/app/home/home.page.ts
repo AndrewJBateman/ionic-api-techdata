@@ -28,6 +28,7 @@ export class HomePage {
 	getData() {
 		this.httpClient.get(this.API_URL).subscribe((entries: any[]) => {
 			this.entries = entries;
+			console.log(entries);
 		});
 	}
 
@@ -37,5 +38,4 @@ export class HomePage {
 			string: name + ' is ' + text
 		});
 	}
-
 }
