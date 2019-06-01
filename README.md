@@ -1,6 +1,6 @@
 # Ionic API TechData
 
-App to display json data from an [API json file](https://media.jscrambler.com/blog/data.json) using the [Ionic 4 framework](https://ionicframework.com/docs) and [Capacitor](https://capacitor.ionicframework.com/).
+App to display json data from an [API json file](https://media.jscrambler.com/blog/data.json) using the [Ionic 5 framework](https://ionicframework.com/docs) and [Capacitor](https://capacitor.ionicframework.com/).
 
 ## Table of contents
 
@@ -25,11 +25,15 @@ App to display json data from an [API json file](https://media.jscrambler.com/bl
 
 ## Technologies
 
-* [Ionic/angular v4.0.0](https://ionicframework.com/)
+* [Ionic/angular v4.4.2](https://ionicframework.com/)
+
+* [Ionic v5.0.0](https://ionicframework.com/)
+
+* [Angular v8.0.0](https://angular.io/)
 
 * [Progressive Web App PWA](https://ionicframework.com/docs/publishing/progressive-web-app) using a service worker for instant loading and offline support.
 
-* [Capacitor v1.0.0-beta.24](https://capacitor.ionicframework.com/) open source native container used to build the app to run on iOS, Android, Electron (Desktop).
+* [Capacitor v1.0.0](https://capacitor.ionicframework.com/) open source native container used to build the app to run on iOS, Android, Electron (Desktop).
 
 * [CORS Chrome Plugin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=es) to allow cross-domain requestst to be sent, also overrides Request Origin and CORS headers.
 
@@ -58,13 +62,19 @@ getData() {
 
 ## Features
 
+* Progressive Web App (PWA) with web manifest and service worker - added using the @angular/pwa package.
+
 * Copy function copies to Clipboard.
+
+* Updated to Angular 8, Ionic 5 and Capacitor 1.
+
+* Deployed on netlify. Not necessary to create build file before pushing to Github repo. This is done by Netlify Deployment.
 
 ## Status & To-do list
 
 * Status: working app that shows API data.
 
-* To-do: publish to the web then add functionality.
+* To-do: modify for electrical API data. Develop country json file to include electrical data. Add functionality. Ultimately publish as an app.
 
 ## Inspiration
 
@@ -74,4 +84,4 @@ getData() {
 
 ## Contact
 
-Created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
