@@ -16,7 +16,6 @@ App to display json data from an [API json file](https://media.jscrambler.com/bl
 ## General info
 
 * This is a Progressive Web App that make a call to an [external json file](https://media.jscrambler.com/blog/data.json) for technical data. This is displayed using Ionic cards with data-binding to the json content.
-
 * There is a copy button that will copy the Ionic card contents using a Capacitor Clipboard plugin.
 
 ## Screenshots
@@ -25,20 +24,16 @@ App to display json data from an [API json file](https://media.jscrambler.com/bl
 
 ## Technologies
 
-* [Ionic/angular v4.4.2](https://ionicframework.com/)
-
-* [Ionic v5.0.0](https://ionicframework.com/)
-
-* [Angular v8.0.0](https://angular.io/)
-
+* [Ionic/angular v5.0.4](https://ionicframework.com/)
+* [Ionic v5.22.0](https://ionicframework.com/)
+* [Angular v9.0.4](https://angular.io/)
 * [Progressive Web App PWA](https://ionicframework.com/docs/publishing/progressive-web-app) using a service worker for instant loading and offline support.
-
-* [Capacitor v1.0.0](https://capacitor.ionicframework.com/) open source native container used to build the app to run on iOS, Android, Electron (Desktop).
-
+* [Capacitor v1.5.0](https://capacitor.ionicframework.com/) open source native container used to build the app to run on iOS, Android, Electron (Desktop).
 * [CORS Chrome Plugin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=es) to allow cross-domain requestst to be sent, also overrides Request Origin and CORS headers.
 
 ## Setup
 
+* Load dependencies using `npm i`,
 * To start the server on _localhost://8100_ type: 'ionic serve'
 
 ## Code Examples
@@ -63,23 +58,20 @@ getData() {
 ## Features
 
 * Progressive Web App (PWA) with web manifest and service worker - added using the @angular/pwa package.
-
 * Copy function copies to Clipboard.
-
-* Updated to Angular 8, Ionic 5 and Capacitor 1.
-
+* Updated to Angular 9, Ionic 5.
 * Deployed on netlify. Not necessary to create build file before pushing to Github repo. This is done by Netlify Deployment.
 
 ## Status & To-do list
 
-* Status: working app that shows API data.
+* Status: NOT working - error `Refused to load the image 'http://localhost:8100/favicon.ico' because it violates the following Content Security Policy directive: "default-src 'none'". Note that 'img-src' was not explicitly set, so 'default-src' is used as a fallback.`
+* When working app shows API data.
 
-* To-do: modify for electrical API data. Develop country json file to include electrical data. Add functionality. Ultimately publish as an app.
+* To-do: fix error. Modify for electrical API data. Develop country json file to include electrical data. Add functionality. Ultimately publish as an app.
 
 ## Inspiration
 
 * [jscrambler blog by Ahmed Bouchefra: Create an Ionic 4 PWA with Capacitor](https://blog.jscrambler.com/create-an-ionic-4-pwa-with-capacitor/).
-
 * [jscrambler blog](https://jscrambler.com/)
 
 ## Contact
