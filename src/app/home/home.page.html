@@ -1,18 +1,15 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      World Electrical Data
-    </ion-title>
-  </ion-toolbar>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title> World Electrical Data </ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content>
 	<ion-list lines="none">
 		<ion-item *ngFor="let entry of entries">
-
 			<ion-card>
 				<ion-header>
 					<ion-card-title>{{ entry.name }}</ion-card-title>
@@ -20,16 +17,24 @@
 				<ion-card-content>
 					<p>{{ entry.description }}</p>
 					<!-- ion-button fill="outline"  -->
-					<ion-button color="primary" ion-button fill="outline" href="{{ entry.url }}" large>More...</ion-button>
-					<ion-button color="secondary" ion-button fill="outline" (click)="copy(entry.name, entry.description)">
+					<ion-button
+						color="primary"
+						ion-button
+						fill="outline"
+						href="{{ entry.url }}"
+						large
+						>More...</ion-button
+					>
+					<ion-button
+						color="secondary"
+						ion-button
+						fill="outline"
+						(click)="copy(entry.name, entry.description)"
+					>
 						COPY
 					</ion-button>
-
-					
 				</ion-card-content>
-					
 			</ion-card>
-			
 		</ion-item>
-	</ion-list> 
+	</ion-list>
 </ion-content>

@@ -19,9 +19,7 @@
       true,
       140
     ],
-		"indent": {
-      "options": ["tabs", 2]
-    },
+		"indent": false,
     "member-access": false,
     "member-ordering": [
       true,
@@ -61,7 +59,7 @@
     "ordered-imports": false,
     "quotemark": [
       true,
-      "single"
+      "double"
     ],
     "trailing-comma": false,
     "no-output-on-prefix": true,

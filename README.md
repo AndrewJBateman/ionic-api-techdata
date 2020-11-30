@@ -29,10 +29,10 @@ App to display json data from an [API json file](https://media.jscrambler.com/bl
 
 * [Ionic/angular v5](https://ionicframework.com/)
 * [Ionic v5](https://ionicframework.com/)
-* [Angular v10](https://angular.io/)
+* [Angular v11](https://angular.io/)
 * [Progressive Web App PWA](https://ionicframework.com/docs/publishing/progressive-web-app) using a service worker for instant loading and offline support.
 * [Capacitor v2](https://capacitor.ionicframework.com/) open source native container used to build the app to run on iOS, Android, Electron (Desktop).
-* [CORS Chrome Plugin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=es) to allow cross-domain reque  st to be sent, also overrides Request Origin and CORS headers.
+* [CORS Chrome Plugin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=es) to allow cross-domain request to be sent, also overrides Request Origin and CORS headers.
 
 ## :floppy_disk: Setup
 
@@ -62,13 +62,12 @@ getData() {
 
 * Progressive Web App (PWA) with web manifest and service worker - added using the @angular/pwa package.
 * Copy function copies to Clipboard.
-* Updated to Angular 10, Ionic 5.
 * Deployed on netlify. Not necessary to create build file before pushing to Github repo. This is done by Netlify Deployment.
 
 ## :clipboard: Status & To-do list
 
-* Status: NOT working
-* When working app shows API data.
+* Status: NOT working - probable an issue with service-worker. When working app shows API data. Passes linting.
+* To-do: Recreate in latest Ionic and add service worker.
 
 * To-do: - recreate with new Ionic app and improve http get method.
 
