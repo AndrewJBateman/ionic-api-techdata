@@ -1,0 +1,60 @@
+{
+  "controls": [
+    {
+      "name": "firstName",
+      "label": "First name",
+      "value": "",
+      "type": "text",
+      "validators": {
+        "required": true,
+        "minLength": 6
+      }
+    },
+    {
+      "name": "lastName",
+      "label": "Last name",
+      "value": "",
+      "type": "text",
+      "validators": {
+        "required": true,
+        "minLength": 6
+      }
+    },
+    {
+      "name": "comments",
+      "label": "Comments",
+      "value": "",
+      "type": "textarea",
+      "validators": {
+        "maxLength": 100
+      }
+    },
+    {
+      "name": "agreeTerms",
+      "label": "Accept Terms & Conditions?",
+      "value": "false",
+      "type": "checkbox",
+      "validators": {}
+    },
+    {
+      "name": "lightDark",
+      "label": "Toggle dark mode",
+      "value": "false",
+      "type": "toggle",
+      "validators": {}
+    },
+    {
+      "name": "size",
+      "label": "Size",
+      "value": "",
+      "type": "range",
+      "options": {
+        "min": "0",
+        "max": "100",
+        "step": "1",
+        "icon": "rainy"
+      },
+      "validators": {}
+    }
+  ]
+}
