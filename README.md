@@ -1,6 +1,7 @@
 # :zap: Ionic API TechData
 
-* App to display json data from an [API json file](https://media.jscrambler.com/blog/data.json) using the [Ionic 5 framework](https://ionicframework.com/docs) and [Capacitor](https://capacitor.ionicframework.com/).
+* Displays a reactive form with controls defined in a JSON file
+* Code from [Joshua Morony](https://www.youtube.com/channel/UCbVZdLngJH6KOJvpAOO3qTw) - see [:clap: Inspiration](#clap-inspiration) below
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/ionic-api-techdata?style=plastic)
@@ -24,21 +25,19 @@
 
 ## :books: General info
 
-* This is a Progressive Web App that make a call to an [external json file](https://media.jscrambler.com/blog/data.json) for technical data. This is displayed using Ionic cards with data-binding to the json content.
-* There is a copy button that will copy the Ionic card contents using a Capacitor Clipboard plugin.
+* [Angular ChangeDetectionStrategy](https://angular.io/api/core/ChangeDetectionStrategy) set to OnPush, so automatic change detection set to off.
 
 ## :camera: Screenshots
 
-![techData screen print](./img/techData.png)
+![techData screen print](./img/form.png)
 
 ## :signal_strength: Technologies
 
 * [Ionic/angular v5](https://ionicframework.com/)
 * [Ionic v5](https://ionicframework.com/)
-* [Angular v11](https://angular.io/)
-* [Progressive Web App PWA](https://ionicframework.com/docs/publishing/progressive-web-app) using a service worker for instant loading and offline support.
-* [Capacitor v2](https://capacitor.ionicframework.com/) open source native container used to build the app to run on iOS, Android, Electron (Desktop).
-* [CORS Chrome Plugin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=es) to allow cross-domain request to be sent, also overrides Request Origin and CORS headers.
+* [Angular v12](https://angular.io/)
+* [Reactive Forms](https://angular.io/guide/reactive-forms) model-driven approach to handling form inputs whose values change over time. 
+* [Transform.Tools](https://transform.tools/) online data format conversion
 
 ## :floppy_disk: Setup
 
@@ -47,44 +46,80 @@
 
 ## :computer: Code Examples
 
-* home.page.ts methods to get data once Ionic page loaded
+* `json-form.component.ts` method to create a form from the `data-form.json` values
 
 ```typescript
-// add the event that is called when the ionic page is loaded then call getData() method
-ionViewDidEnter() {
-  this.getData();
-}
+  createForm(controls: IJsonFormControls[]) {
+    for (const control of controls) {
+      const validatorsToAdd = [];
 
-// method to call get() method of HttpClient and subscribe to the returned Observable
-// assign fetched data to the entries varaible.
-getData() {
-  this.httpClient.get(this.API_URL).subscribe((entries: any[]) => {
-    this.entries = entries;
-  });
-}
+      for (const [key, value] of Object.entries(control.validators)) {
+        switch (key) {
+          case 'min':
+            validatorsToAdd.push(Validators.min(value));
+            break;
+          case 'max':
+            validatorsToAdd.push(Validators.max(value));
+            break;
+          case 'required':
+            if (value) {
+              validatorsToAdd.push(Validators.required);
+            }
+            break;
+          case 'requiredTrue':
+            if (value) {
+              validatorsToAdd.push(Validators.requiredTrue);
+            }
+            break;
+          case 'email':
+            if (value) {
+              validatorsToAdd.push(Validators.email);
+            }
+            break;
+          case 'minLength':
+            validatorsToAdd.push(Validators.minLength(value));
+            break;
+          case 'maxLength':
+            validatorsToAdd.push(Validators.maxLength(value));
+            break;
+          case 'pattern':
+            validatorsToAdd.push(Validators.pattern(value));
+            break;
+          case 'nullValidator':
+            if (value) {
+              validatorsToAdd.push(Validators.nullValidator);
+            }
+            break;
+          default:
+            break;
+        }
+      }
+
+      this.dataForm.addControl(
+        control.name,
+        this.fb.control(control.value, validatorsToAdd)
+      );
+    }
+    console.log('data form: ', this.dataForm);
+  }
 ```
 
 ## :cool: Features
 
-* Progressive Web App (PWA) with web manifest and service worker - added using the @angular/pwa package.
-* Copy function copies to Clipboard.
-* Deployed on netlify. Not necessary to create build file before pushing to Github repo. This is done by Netlify Deployment.
+* Defines reactive form controls from a JSON file
 
 ## :clipboard: Status & To-do list
 
-* Status: NOT working - probable an issue with service-worker. When working app shows API data. Passes linting.
-* To-do: Recreate in latest Ionic and add service worker.
-
-* To-do: - recreate with new Ionic app and improve http get method.
+* Status: Working
+* To-do: Nothing
 
 ## :clap: Inspiration
 
-* [jscrambler blog by Ahmed Bouchefra: Create an Ionic 4 PWA with Capacitor](https://blog.jscrambler.com/create-an-ionic-4-pwa-with-capacitor/).
-* [jscrambler blog](https://jscrambler.com/)
+* [Josh Morony: Create a Dynamic Reactive Angular Form with JSON](https://www.youtube.com/watch?v=ByHw_RMjkKM&t=48s)
 
 ## :file_folder: License
 
-* This project is licensed under the terms of the MIT license.
+* N/A
 
 ## :envelope: Contact
 
