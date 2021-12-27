@@ -33,9 +33,9 @@
 
 ## :signal_strength: Technologies
 
-* [Ionic/angular v5](https://ionicframework.com/)
-* [Ionic v5](https://ionicframework.com/)
-* [Angular v12](https://angular.io/)
+* [Ionic/angular v6](https://ionicframework.com/)
+* [Ionic v6](https://ionicframework.com/)
+* [Angular v13](https://angular.io/)
 * [Reactive Forms](https://angular.io/guide/reactive-forms) model-driven approach to handling form inputs whose values change over time. 
 * [Transform.Tools](https://transform.tools/) online data format conversion
 
