@@ -5,7 +5,7 @@ import {
   ChangeDetectionStrategy,
   SimpleChanges,
 } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import {
   IJsonFormControls,
   IJsonFormData,
@@ -20,9 +20,9 @@ import {
 export class JsonFormComponent implements OnChanges {
   @Input() jsonFormData: IJsonFormData;
 
-  public dataForm: FormGroup = this.fb.group({});
+  public dataForm: UntypedFormGroup = this.fb.group({});
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: UntypedFormBuilder) {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (!changes.jsonFormData.firstChange) {

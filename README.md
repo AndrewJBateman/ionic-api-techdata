@@ -12,15 +12,16 @@
 ## :page_facing_up: Table of contents
 
 * [:zap: Ionic API TechData](#zap-ionic-api-techdata)
-  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:page\_facing\_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
-  * [:signal_strength: Technologies](#signal_strength-technologies)
-  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:signal\_strength: Technologies](#signal_strength-technologies)
+  * [:floppy\_disk: Setup](#floppy_disk-setup)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
-  * [:clipboard: Status & To-do list](#clipboard-status--to-do-list)
+  * [:clipboard: Status \& To-do list](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
+  * [:file\_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -36,7 +37,7 @@
 * [Ionic/angular v6](https://ionicframework.com/)
 * [Ionic v6](https://ionicframework.com/)
 * [Angular v13](https://angular.io/)
-* [Reactive Forms](https://angular.io/guide/reactive-forms) model-driven approach to handling form inputs whose values change over time. 
+* [Reactive Forms](https://angular.io/guide/reactive-forms) model-driven approach to handling form inputs whose values change over time.
 * [Transform.Tools](https://transform.tools/) online data format conversion
 
 ## :floppy_disk: Setup
