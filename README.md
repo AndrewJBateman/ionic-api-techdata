@@ -34,9 +34,9 @@
 
 ## :signal_strength: Technologies
 
-* [Ionic/angular v6](https://ionicframework.com/)
-* [Ionic v6](https://ionicframework.com/)
-* [Angular v15](https://angular.io/)
+* [Ionic/angular v7](https://ionicframework.com/)
+* [Ionic v7](https://ionicframework.com/)
+* [Angular v16](https://angular.io/)
 * [Reactive Forms](https://angular.io/guide/reactive-forms) model-driven approach to handling form inputs whose values change over time.
 * [Transform.Tools](https://transform.tools/) online data format conversion
 
@@ -124,4 +124,4 @@
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: `gomezbateman@yahoo.com`
